@@ -4,8 +4,8 @@ Proyecto backend desarrollado en **Node.js (Express)** con arquitectura multicap
 
 ## 📌 Enlaces del Proyecto
 
-- **Repositorio GitHub**: `https://github.com/gelt00/Entrega_Final_BackendIII_Testing_Escalabilidad`
-- **Imagen en DockerHub**: `https://hub.docker.com/r/gelt0/entrega_final_backend3`
+- **Repositorio GitHub**: `https://github.com/gelt0/Entrega_Final_BackendIII_Testing_Escalabilidad`
+- **Imagen en DockerHub**: `https://hub.docker.com/r/gelt0/backend3-adoption-api`
 
 ---
 
