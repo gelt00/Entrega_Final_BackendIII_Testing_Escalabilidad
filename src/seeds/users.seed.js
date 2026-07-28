@@ -1,20 +1,20 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 
-import { UserModel } from '../models/user.model.js';
-import { logger } from '../utils/logger.js';
+import { UserModel } from "../models/user.model.js";
+import { logger } from "../utils/logger.js";
 
 const initialUsers = [
   {
-    username: 'admin',
-    email: 'admin@coder.com',
-    password: 'admin123',
-    role: 'admin',
+    username: "admin",
+    email: "admin@coder.com",
+    password: "admin123",
+    role: "admin",
   },
   {
-    username: 'user',
-    email: 'user@coder.com',
-    password: 'user123',
-    role: 'user',
+    username: "user",
+    email: "user@coder.com",
+    password: "user123",
+    role: "user",
   },
 ];
 
@@ -23,8 +23,8 @@ export async function seedUsers() {
 
   if (usersCount > 0) {
     logger.info({
-      msg: 'Users seed skipped',
-      reason: 'Users already exist',
+      msg: "Carga Inicial Omitida",
+      reason: "Los usuarios ya existen",
     });
 
     return;
@@ -38,17 +38,17 @@ export async function seedUsers() {
         ...user,
         password: hashedPassword,
       };
-    })
+    }),
   );
 
   await UserModel.insertMany(usersToCreate);
 
   logger.info({
-    msg: 'Users seed completed',
+    msg: "Carga Inicial Completa",
     users: initialUsers.map((user) => ({
       username: user.username,
       email: user.email,
-      role: user.role
+      role: user.role,
     })),
   });
 }

@@ -35,7 +35,7 @@ describe('Router de Adopciones: GET & POST /api/adoptions (Functional Tests con 
           _id: '60d5ec49f1b2c81184a7e1a1',
           owner: '60d5ec49f1b2c81184a7e100',
           pet: '60d5ec49f1b2c81184a7e200',
-          status: 'completado',
+          status: 'completed',
         },
       ];
       adoptionsRepo.getAllAdoptions.mockResolvedValue(mockAdoptions);
@@ -65,7 +65,7 @@ describe('Router de Adopciones: GET & POST /api/adoptions (Functional Tests con 
         _id: '60d5ec49f1b2c81184a7e1a1',
         owner: '60d5ec49f1b2c81184a7e100',
         pet: '60d5ec49f1b2c81184a7e200',
-        status: 'completado',
+        status: 'completed',
       };
       adoptionsRepo.getAdoptionById.mockResolvedValue(mockAdoption);
 
@@ -100,7 +100,7 @@ describe('Router de Adopciones: GET & POST /api/adoptions (Functional Tests con 
         _id: '60d5ec49f1b2c81184a7e1a1',
         owner: validUid,
         pet: validPid,
-        status: 'completado',
+        status: 'completed',
       };
       adoptionsRepo.createAdoption.mockResolvedValue(createdAdoption);
       petsRepo.updatePetById.mockResolvedValue({ _id: validPid, adopted: true, owner: validUid });

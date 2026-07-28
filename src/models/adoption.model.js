@@ -1,21 +1,21 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const adoptionSchema = new mongoose.Schema(
   {
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: "User",
       required: true,
     },
     pet: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Pet',
+      ref: "Pet",
       required: true,
     },
     status: {
       type: String,
-      enum: ['pending', 'completed', 'cancelled'],
-      default: 'completed',
+      enum: ["pending", "completed", "cancelled"],
+      default: "completed",
     },
   },
   {
@@ -24,4 +24,4 @@ const adoptionSchema = new mongoose.Schema(
   }
 );
 
-export const AdoptionModel = mongoose.model('Adoption', adoptionSchema);
+export const AdoptionModel = mongoose.model("Adoption", adoptionSchema);
